@@ -1,0 +1,174 @@
+.navBaritem{
+    position: fixed;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
+    padding: 0 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 10px 100px rgb(0 0 0 / 10%);
+    justify-content: space-between;
+    height: 65px;
+    z-index: 999;
+
+}
+.nav-link{
+    padding: 1rem 1.8rem;
+    font-size: 0.8rem;
+    display: inline-block;
+    /* font-size: 1.6rem; */
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transition: color .3s;
+    text-decoration: none;
+    /* margin-right: 50px; */
+    
+}
+.menu-item{
+    display: flex;
+    margin-right: 35px;
+    list-style: none;
+}
+
+
+.logo:hover ,.nav-link:hover{
+    color: #facf0f;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+    transition: color .5s;
+}
+.name{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-bottom: 1px solid #facf0f;
+}
+/* hamburger */
+
+@media screen and (max-width: 760px) {
+    .navbarItems{
+        z-index: 999;
+    }
+    .menu-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: rgba(255, 255, 255, .25);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37);
+        backdrop-filter: blur(4px);
+        border-radius: 13px;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -110%;
+        padding: 80px 0 30px 0;
+        margin:  0px;
+        z-index: -1;
+        transition: all 0.8s cubic-bezier(0.6, -0.28, 0.22, 1.44)
+    }
+
+    .menu-item.active {
+        left: 0%;
+    }
+
+    .menu-item li {
+        display: block;
+        width: 100%;
+        padding: 2rem 0rem;
+        font-weight: bold;
+        color: #222;
+    }
+    .menu-item li:hover{
+        background-color: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(20px);
+        border: none;
+    }
+    .menuIcon {
+        display: block;
+    }
+    .menu-toggle{
+        flex:0 0 auto;
+        width:70px;
+        height:70px;
+    /* 	border:1px solid rgb(15,15,15); */
+        cursor:pointer;
+        position:absolute;
+        margin-right: 58px;
+        right: 0;
+    }
+    .hamburger,.cross{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    .hamburger span{
+        display:block;
+        width:40px;
+        height:5px;
+        margin-bottom:3px;
+        overflow:hidden;
+        position:relative;
+    }
+    .hamburger span:last-child{
+        margin:0;
+    }
+    .hamburger span:before,.hamburger span:after{
+        content:"";
+        position:absolute;
+        width:100%;
+        height:100%;
+        background-color:rgb(15,15,15);
+        transform:translateX(-200%);
+        transition:transform ease 300ms;
+    }
+    .hamburger span:after{
+        transform:translateX(0);
+    }
+    .hamburger span:nth-child(2):before,.hamburger span:nth-child(2):after{
+        transition-delay:75ms;
+    }
+    .hamburger span:last-child:before,.hamburger span:last-child:after{
+        transition-delay:150ms;
+    }
+    .menu-toggle:hover .hamburger span:before{
+        transform:translateX(0);
+    }
+    .menu-toggle:hover .hamburger span:after{
+        transform:translateX(200%);
+    }
+    .menu-toggle.active .hamburger span:before{
+        transform:translateX(100%);
+    }
+    .menu-toggle.active .hamburger span:after{
+        transform:translateX(200%);
+    }
+    .cross span{
+        display:block;
+        width:40px;
+        height:5px;
+        background-color:rgb(15,15,15);
+        transform:translateY(50%) rotate(45deg) scaleX(0);
+        transition:transform ease 200ms;
+    }
+    .cross span:last-child{
+        transform:translateY(-50%) rotate(-45deg) scaleX(0);
+    }
+    .menu-toggle.active .cross span{
+        transition-delay:450ms;
+        transform:translateY(50%) rotate(45deg) scaleX(1);
+    }
+    .menu-toggle.active .cross span:last-child{
+        transform:translateY(-50%) rotate(-45deg) scaleX(1);
+    }
+}
+

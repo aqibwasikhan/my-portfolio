@@ -1,0 +1,52 @@
+.hero {
+  display: flex;
+}
+.hero .static-txt {
+  color: #fff;
+  font-size: 68px;
+  font-weight: 400;
+}
+.hero .dynamic-txts {
+  margin-left: 15px;
+  height: 96px;
+  line-height: 98px;
+  overflow: hidden;
+}
+.dynamic-txts li {
+  list-style: none;
+  color: #16f37d;
+  font-size: 68px;
+  font-weight: 580;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -368px;
+  }
+}
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px;
+  line-height: 98px;
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: 1088;
+  border-left: 2px solid 316f37d;
+  animation: typing 35 steps(18) Infinite;
+}
+@keyframes typing {
+  48%,
+  68% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
