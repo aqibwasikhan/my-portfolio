@@ -42,8 +42,7 @@
   animation: typing 35 steps(18) Infinite;
 }
 @keyframes typing {
-  48%,
-  68% {
+  40%, 60% {
     left: calc(100% + 30px);
   }
   100% {

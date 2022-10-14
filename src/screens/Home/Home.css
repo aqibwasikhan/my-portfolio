@@ -14,7 +14,22 @@
     font-size: 4rem;
     font-family: sans-serif;
 }
+.main h4 {
+    color: #333;
+    text-transform: uppercase;
+    /* letter-spacing: 3px; */
+    font-size: 2rem;
+    font-family: sans-serif;
+    position: absolute;
+    left: 0;
+    margin-left: 30%;
+}
+.main h4 span{
+    color: #facf0f;
+    letter-spacing: 3px;
 
+
+}
 .main span {
     /* color: #facf0f; */
     /* font-family: 'Ms Madi', cursive; */
@@ -32,20 +47,68 @@
 }
 
 .main button {
-    padding: 5px;
-    width: 300px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #333;
+    /* padding: 5px; */
+    width: 280px;
+    height: 45px;
+    /* border-radius: 5px; */
+    /* font-size: 20px; */
+    /* font-weight: bold; */
+    /* color: #333; */
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
+    letter-spacing: 3px;
+     /*font-weight: 700;
     background: #facf0f;
-    border: 1pc solid #facf0f;
+    border: 1pc solid #facf0f; */
     cursor: pointer;
-    box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%);
+    /* box-shadow: 0 5px 15px 0 rgb(0 0 0 / 15%); */
+    background-color: #facf0f;
+    line-height: 1;
+    border: 2px solid #facf0f;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    /* padding: 0.75rem 1rem; */
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: .2s transform ease-in-out;
+    will-change: transform;
+    z-index: 0;
 }
+.main button::after {
+    background-color: #fff;
+    border-radius: 4px;
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: .2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+    /* color: #facf0f; */
+
+  }
+  .main button:hover::after {
+    transform: translate(0, 0);
+  }
+
+  .main button:hover {
+    border: 2px solid transparent;
+    color: #facf0f;
+    transform: scale(1.05);
+    will-change: transform;
+    border: 2px solid #facf0f;
+    box-shadow: 0 5px 15px 0 #facf0f;
+    
+  }
+
 
 .social-media {
     background: #fff;

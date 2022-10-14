@@ -2,6 +2,7 @@ import React from "react";
 import './NameText.css';
 
 
+
 const NameText = () => {
   return (
     <div class="hero">
